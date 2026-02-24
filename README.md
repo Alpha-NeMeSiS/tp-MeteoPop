@@ -2,7 +2,7 @@
 
 ## Objectif
 Créer un site vitrine simple pour un festival (MétéoPop) en **HTML/CSS**.
-Le site doit respecter une **DA** (violet/orange), utiliser une **vidéo en hero**, et afficher la **programmation** (artistes + horaires).
+Le site doit respecter une **DA** (violet/orange), utiliser une **vidéo**, et afficher la **programmation** (artistes + horaires).
 
 ---
 
