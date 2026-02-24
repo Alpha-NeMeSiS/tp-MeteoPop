@@ -1,0 +1,202 @@
+/* css/common.css */
+
+/* Reset simple */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Couleurs du site */
+:root {
+  --violet: #3b0b66;
+  --violet-clair: #5a2b86;
+  --orange: #ff7a00;
+  --blanc: #ffffff;
+}
+
+/* Base */
+body {
+  font-family: Arial, sans-serif;
+  background: var(--blanc);
+  color: var(--violet);
+}
+
+/* ===== Header + vidéo ===== */
+.header-page {
+  position: relative;
+  min-height: 72vh;
+  overflow: hidden;
+  padding-top: 70px; /* place pour la nav */
+}
+
+/* bande violette en haut */
+.header-page::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 70px;
+  background: var(--violet);
+  z-index: 5;
+}
+
+/* logo */
+.header-page > img {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  height: 50px;
+  z-index: 6;
+}
+
+/* nav */
+.header-page nav {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  z-index: 6;
+}
+
+.header-page nav ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+}
+
+.header-page nav a {
+  color: var(--blanc);
+  text-decoration: none;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.header-page nav a:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* bouton menu (Billetterie) */
+.header-page nav a.cta {
+  background: var(--orange);
+  border-radius: 2px;
+}
+
+/* lien actif (optionnel) */
+.header-page nav a.active {
+  background: var(--blanc);
+  color: var(--violet);
+  border-radius: 2px;
+}
+
+/* vidéo */
+.affiche-video {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: calc(72vh - 70px);
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* voile sombre sur la vidéo */
+.header-page::after {
+  content: "";
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  height: calc(72vh - 70px);
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 2;
+}
+
+/* titre sur la vidéo */
+.header-page h1 {
+  position: absolute;
+  top: calc(70px + 22vh);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  max-width: 1000px;
+  text-align: center;
+  color: var(--blanc);
+  font-family: Georgia, serif;
+  font-size: 40px;
+  z-index: 3;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.45);
+}
+
+/* boutons du hero (Programme / Billetterie) */
+.header-page > ul {
+  position: absolute;
+  top: calc(70px + 36vh);
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  z-index: 3;
+}
+
+.header-page > ul a {
+  background: var(--orange);
+  color: var(--blanc);
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 2px;
+  font-size: 14px;
+}
+
+.header-page > ul a:hover {
+  filter: brightness(0.95);
+}
+
+/* ===== Bouton générique ===== */
+.btn {
+  display: inline-block;
+  background: var(--orange);
+  color: var(--blanc);
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 2px;
+  font-size: 14px;
+}
+
+.btn:hover {
+  filter: brightness(0.95);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: var(--violet);
+  text-align: center;
+  padding: 18px 12px;
+}
+
+footer a {
+  color: var(--orange);
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+footer p {
+  color: var(--blanc);
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+/* ===== Responsive simple ===== */
+@media (max-width: 520px) {
+  .header-page > ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-page h1 {
+    font-size: 28px;
+  }
+}
