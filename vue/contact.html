@@ -1,23 +1,64 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact — Organisateurs</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contact.css">
 </head>
+
 <body>
-    <form id="contact-form" onsubmit="return false;" aria-label="Formulaire de contact">
-        <label for="name">Nom de la personne</label>
-        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+    <div class="header-page">
+        <img src="../asset/img/logo.png" alt="Logo de Billeterie MétéoPop"
+            onclick="window.location.href='../index.html'">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../vue/programme.html">Programme</a></li>
+                <li><a href="../vue/billetteries.html" class="cta">Billetterie</a></li>
+            </ul>
+        </nav>
 
-        <label for="email">Email de la personne</label>
-        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+        <video src="../asset/video/festival.mp4" autoplay muted loop class="affiche-video"></video>
+        <h1>Rendez-vous le 10, 11 et 12 Juillet à Lyon</h1>
+        <ul>
+            <li><a href="../vue/programme.html">Programme ⟶</a></li>
+            <li><a href="../vue/billetteries.html">Billetterie ⟶</a></li>
+        </ul>
+    </div>
 
-        <label for="message">Message à envoyer aux organisateurs</label>
-        <textarea id="message" name="message" placeholder="Votre message..." required></textarea>
+    <section class="contact-wrap" aria-labelledby="contact-title">
+        <h2 id="contact-title" class="contact-title">Contactez les organisateurs</h2>
+        <p class="contact-intro">Une question, une demande de partenariat ou un problème avec la billetterie ?
+            Écrivez-nous et nous répondrons sous 48 heures.</p>
 
-        <button type="submit">Envoyer</button>
-    </form>
+        <form id="contact-form" onsubmit="return false;" aria-label="Formulaire de contact">
+            <div class="form-group">
+                <label for="name">Nom de la personne</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email de la personne</label>
+                <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+            </div>
+
+            <div class="form-group full">
+                <label for="message">Message à envoyer aux organisateurs</label>
+                <textarea id="message" name="message" placeholder="Votre message..." required></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit">Envoyer</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 MétéoPop. Tous droits réservés.</p>
+    </footer>
 </body>
+
 </html>

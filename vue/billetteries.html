@@ -1,26 +1,94 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Billetterie — MétéoPop</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Billetterie – MétéoPop</title>
+
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/billetterie.css">
 </head>
+
 <body>
+  <!-- HERO -->
   <div class="header-page">
-    <img src="../asset/img/logo.png" alt="Logo" onclick="window.location.href='../index.html'">
+    <img src="../asset/img/logo.png" alt="Logo du festival MétéoPop">
+
     <nav>
       <ul>
+        <li><a href="../index.html">Home</a></li>
         <li><a href="../vue/programme.html">Programme</a></li>
         <li><a href="../vue/contact.html">Contact</a></li>
       </ul>
     </nav>
+
+    <video src="../asset/video/festival.mp4" autoplay muted loop class="affiche-video"></video>
+    <h1>Billetterie – Tarifs 2026</h1>
+
+    <ul>
+      <li><a href="#tarifs">Voir les pass ⟶</a></li>
+      <li><a href="#infos">Infos ⟶</a></li>
+    </ul>
   </div>
 
-  <main class="programme">
-    <h2>Billetterie</h2>
-    <p>Les billets seront disponibles ici bientôt. Pour toute question, contactez-nous via la page Contact.</p>
-    <a class="btn" href="#">Acheter un billet (bientôt)</a>
+  <main>
+    <!-- TARIFS -->
+    <section id="tarifs" class="tarifs">
+      <h2>Choisis ton pass</h2>
+
+      <div class="tarifs-grid">
+        <!-- Pass 1 jour -->
+        <article class="tarif-card">
+          <h3>Pass 1 jour</h3>
+          <p class="prix">30€</p>
+          <ul>
+            <li>Accès 1 journée</li>
+            <li>Concerts + animations</li>
+            <li>Entrée à partir de 14h</li>
+          </ul>
+          <button class="btn">Réserver</button>
+        </article>
+
+        <!-- Pass 2 jours -->
+        <article class="tarif-card">
+          <h3>Pass 2 jours</h3>
+          <p class="prix">55€</p>
+          <ul>
+            <li>Accès 2 journées</li>
+            <li>Concerts + animations</li>
+            <li>Meilleur rapport prix</li>
+          </ul>
+          <button class="btn">Réserver</button>
+        </article>
+
+        <!-- Pass 3 jours -->
+        <article class="tarif-card tarif-populaire">
+          <div class="badge">Populaire</div>
+          <h3>Pass 3 jours</h3>
+          <p class="prix">70€</p>
+          <ul>
+            <li>Accès 3 journées</li>
+            <li>Concerts + animations</li>
+            <li>Le pass complet</li>
+          </ul>
+          <button class="btn">Réserver</button>
+        </article>
+
+        <!-- VIP -->
+        <article class="tarif-card">
+          <h3>Pass VIP</h3>
+          <p class="prix">120€</p>
+          <ul>
+            <li>Accès 3 journées</li>
+            <li>File dédiée</li>
+            <li>Espace VIP</li>
+          </ul>
+          <button class="btn">Réserver</button>
+        </article>
+      </div>
+    </section>
+
   </main>
 
   <footer>
@@ -28,4 +96,5 @@
     <p>&copy; 2026 MétéoPop. Tous droits réservés.</p>
   </footer>
 </body>
+
 </html>
