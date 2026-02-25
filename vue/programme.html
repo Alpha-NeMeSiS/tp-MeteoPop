@@ -10,9 +10,18 @@
 
 <body>
     <div class="header-page">
-        <img src="../asset/img/logo.png" alt="Logo de Billeterie MétéoPop" onclick="window.location.href='../index.html'">
-        <nav>
-            <ul>
+        <img src="../asset/img/logo.png" alt="Logo de Billeterie MétéoPop"
+            onclick="window.location.href='../index.html'">
+        <nav class="main-nav">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+            <label for="nav-toggle" class="burger" aria-label="Ouvrir / fermer le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="nav-links">
                 <li><a href="../index.html">Accueil</a></li>
                 <li><a href="../vue/contact.html">Contact</a></li>
                 <li><a href="../vue/billetteries.html" class="cta">Billetterie</a></li>
